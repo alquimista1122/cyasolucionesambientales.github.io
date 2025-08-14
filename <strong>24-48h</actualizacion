@@ -1,0 +1,1206 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="C&A - Clavijo y Asociados: Consultoría ambiental estratégica para cumplir, proteger y prosperar juntos. Transformamos la gestión ambiental en ventaja competitiva.">
+    <title>C&A - Clavijo y Asociados | Soluciones Ambientales Estratégicas</title>
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-blue: #3b82f6;
+            --light-blue: #dbeafe;
+            --primary-green: #059669;
+            --secondary-green: #10b981;
+            --light-green: #d1fae5;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --accent-orange: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--white);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(37, 99, 235, 0.1);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .logo-container {
+            width: 55px;
+            height: 55px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .logo-container::before {
+            content: '🌿';
+            font-size: 28px;
+            color: white;
+        }
+
+        .brand-text {
+            font-weight: 800;
+            font-size: 20px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand-subtitle {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--gray-600);
+            display: block;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            transition: color 0.3s ease;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gray-900);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--light-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 100%;
+            height: 150%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(37,99,235,0.05)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(5,150,105,0.05)" stroke-width="0.5"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--gray-600);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+            border: 1px solid var(--gray-200);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .metric span {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--light-blue), var(--light-green));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            border: 2px dashed var(--gray-300);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-placeholder::before {
+            content: '🌍 📊 🌱';
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 16px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn.primary:hover {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn.secondary {
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            background: var(--white);
+        }
+
+        .btn.secondary:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .section-subtitle {
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-category {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 30px rgba(37, 99, 235, 0.08);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-category:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .service-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-category h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+        }
+
+        .service-icon {
+            font-size: 28px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 1rem 0;
+            color: var(--gray-600);
+            border-bottom: 1px solid var(--gray-200);
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .service-list li:hover {
+            color: var(--gray-900);
+        }
+
+        .service-list li:before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+
+        .team-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .team-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--light-blue), var(--white));
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--gray-600);
+            border: 2px dashed var(--gray-300);
+            margin: 2rem 0;
+        }
+
+        .team-placeholder::before {
+            content: '👥 🏢 🎯';
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: var(--gray-50);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border-left: 5px solid var(--primary-blue);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.05);
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            color: var(--gray-700);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial cite {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--light-blue) 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--gray-50);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: var(--light-blue);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+        }
+
+        .contact-item a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-green);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            background: var(--white);
+            color: var(--gray-900);
+            font-family: inherit;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .response-time {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--light-blue), var(--light-green));
+            border-radius: 16px;
+            border-left: 5px solid var(--primary-green);
+            text-align: center;
+        }
+
+        .response-time strong {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul li a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-700);
+            color: var(--gray-300);
+        }
+
+        /* Photo Integration Guidelines */
+        .photo-placeholder {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-green));
+            border: 2px dashed var(--gray-300);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .service-category {
+                padding: 2rem;
+            }
+
+            .brand-text {
+                font-size: 16px;
+            }
+
+            .logo-container {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .loading {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#inicio" class="brand">
+                <div class="logo-container"></div>
+                <div>
+                    <div class="brand-text">C&A - CLAVIJO Y ASOCIADOS</div>
+                    <span class="brand-subtitle">Cumplir, proteger y prosperar juntos</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="loading">Transformamos la Gestión Ambiental en Ventaja Competitiva</h1>
+                    <p class="subtitle loading">Con más de 15 años de experiencia técnica y regulatoria, ayudamos a empresas y organismos públicos a lograr cumplimiento normativo, protección de recursos naturales y metas de sostenibilidad, sin frenar sus operaciones.</p>
+                    
+                    <div class="metrics">
+                        <div class="metric loading">
+                            <strong>100%</strong>
+                            <span>Aprobaciones regulatorias</span>
+                        </div>
+                        <div class="metric loading">
+                            <strong>50+</strong>
+                            <span>Proyectos ejecutados</span>
+                        </div>
+                        <div class="metric loading">
+                            <strong>24h</strong>
+                            <span>Tiempo de respuesta</span>
+                        </div>
+                        <div class="metric loading">
+                            <strong>15+</strong>
+                            <span>Años experiencia LATAM</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons loading">
+                        <a href="#contacto" class="btn primary">📞 Solicitar Evaluación Inicial</a>
+                        <a href="https://wa.me/593988125641?text=Hola%20quiero%20información%20sobre%20servicios%20ambientales" class="btn secondary" target="_blank">💬 WhatsApp - Respuesta en 24h</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-placeholder">
+                        <!-- FOTO SUGERIDA: Imagen de equipo trabajando en campo con equipos de medición ambiental, 
+                             o vista aérea de proyecto de conservación exitoso -->
+                        <div>
+                            <strong>Aquí va tu foto principal:</strong><br>
+                            Sugerencia: Equipo en campo con equipos de monitoreo<br>
+                            o proyecto ambiental exitoso<br>
+                            Dimensiones ideales: 600x400px
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Ofrecemos soluciones integrales, desde el diagnóstico inicial hasta la ejecución operativa y el seguimiento, con enfoque en resultados medibles y cumplimiento garantizado.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Regularización y Cumplimiento Ambiental -->
+                <div class="service-category">
+                    <h3><span class="service-icon">📋</span>Regularización y Cumplimiento Ambiental</h3>
+                    <ul class="service-list">
+                        <li>Estudios de Impacto Ambiental (EsIA)</li>
+                        <li>Registros Ambientales</li>
+                        <li>Auditorías e Informes de Cumplimiento</li>
+                        <li>Planes de manejo ambiental</li>
+                    </ul>
+                </div>
+
+                <!-- Gestión Integral de Residuos Peligrosos -->
+                <div class="service-category">
+                    <h3><span class="service-icon">♻️</span>Gestión Integral de Residuos Peligrosos</h3>
+                    <ul class="service-list">
+                        <li>Registro Generador y Declaración Anual</li>
+                        <li>Planes de Minimización y disposición final</li>
+                        <li>Cumplimiento de normativa MAATE</li>
+                        <li>Gestión operativa integral</li>
+                    </ul>
+                </div>
+
+                <!-- Patrimonio Natural y Biodiversidad -->
+                <div class="service-category">
+                    <h3><span class="service-icon">🌳</span>Patrimonio Natural y Biodiversidad</h3>
+                    <ul class="service-list">
+                        <li>Declaración de Bosques y Vegetación Protectores</li>
+                        <li>Adjudicación de tierras en Patrimonio Forestal</li>
+                        <li>Planes de manejo BVP</li>
+                        <li>Estudios de biodiversidad y conservación</li>
+                    </ul>
+                </div>
+
+                <!-- Certificaciones y Reconocimientos -->
+                <div class="service-category">
+                    <h3><span class="service-icon">🏆</span>Certificaciones y Reconocimientos</h3>
+                    <ul class="service-list">
+                        <li>Punto Verde - MAATE</li>
+                        <li>Ecuador Carbono Cero</li>
+                        <li>Proyecto GRECI y PGI (plásticos, neumáticos, RAEE, pilas)</li>
+                        <li>Certificaciones de sostenibilidad empresarial</li>
+                    </ul>
+                </div>
+
+                <!-- Monitoreos Ambientales -->
+                <div class="service-category">
+                    <h3><span class="service-icon">📊</span>Monitoreos Ambientales</h3>
+                    <ul class="service-list">
+                        <li>Calidad de aire, agua y suelo</li>
+                        <li>Ruido ambiental y radiaciones no ionizantes</li>
+                        <li>Emisiones industriales</li>
+                        <li>Monitoreo de cumplimiento normativo</li>
+                    </ul>
+                </div>
+
+                <!-- Sistemas de Información Geográfica (SIG) -->
+                <div class="service-category">
+                    <h3><span class="service-icon">🗺️</span>Sistemas de Información Geográfica (SIG)</h3>
+                    <ul class="service-list">
+                        <li>Mapas temáticos con ArcGIS Pro</li>
+                        <li>Levantamientos topográficos y análisis espacial</li>
+                        <li>Procesamiento de imágenes satelitales</li>
+                        <li>Análisis geoespacial ambiental</li>
+                    </ul>
+                </div>
+
+                <!-- Capacitaciones Especializadas -->
+                <div class="service-category">
+                    <h3><span class="service-icon">🎓</span>Capacitaciones Especializadas</h3>
+                    <ul class="service-list">
+                        <li>Gestión ambiental y residuos peligrosos</li>
+                        <li>ArcMap y ArcGIS Pro</li>
+                        <li>Cambio climático y sostenibilidad empresarial</li>
+                        <li>Normativa ambiental actualizada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <div class="team-intro">
+                    <p class="section-subtitle">En Clavijo y Asociados operamos con un equipo de ingenieros ambientales, geólogos, sociólogos, geógrafos y biólogos, con amplia experiencia en proyectos de alto impacto, permisos, regularización ambiental y manejo de patrimonio natural.</p>
+                    
+                    <div class="team-placeholder">
+                        <!-- FOTO SUGERIDA: Foto grupal del equipo profesional en oficina 
+                             o en sitio de proyecto, mostrando diversidad profesional -->
+                        <div>
+                            <strong>Aquí va la foto del equipo:</strong><br>
+                            Sugerencia: Foto grupal profesional<br>
+                            mostrando la diversidad de especialistas<br>
+                            Dimensiones ideales: 800x300px
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+                <p class="section-subtitle">Casos de éxito que demuestran nuestro compromiso con la excelencia y los resultados medibles.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <blockquote>
+                        "Entregaron la licencia ambiental en tiempo récord sin afectar nuestra operación; su rigor técnico y gestión con autoridades fue decisiva."
+                    </blockquote>
+                    <cite>— Responsable de Operaciones<br>Ecuatoriana de Alimentos S.A.</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        "Con C&A convertimos el manejo de residuos en ahorro real y cumplimiento sólido. Profesionalismo y resultados medibles."
+                    </blockquote>
+                    <cite>— Jefe de Sostenibilidad<br>Empresa Industrial</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        "Estudio robusto, medidas prácticas y ejecución impecable: un aliado estratégico para proyectos de alto impacto. Logramos licencias y metas sin frenar el negocio."
+                    </blockquote>
+                    <cite>— Coordinador de Proyecto<br>Declaración de Bosques y Vegetación Protector</cite>
+                </div>
+            </div>
+
+            <!-- Success Cases Visual -->
+            <div style="margin-top: 4rem;">
+                <div class="photo-placeholder" style="height: 250px;">
+                    <div>
+                        <strong>Galería de Proyectos Exitosos:</strong><br>
+                        Antes y después de proyectos de conservación<br>
+                        Equipos trabajando en campo<br>
+                        Certificaciones obtenidas<br>
+                        Dimensiones sugeridas: 1200x250px (banner)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Listo para Convertir tu Gestión Ambiental en un Activo Estratégico?</h2>
+                <p class="section-subtitle">Contáctanos y recibe una evaluación inicial en menos de 48 horas.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 2rem; font-size: 1.5rem;">Información de Contacto</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:ambiental.cya@gmail.com">ambiental.cya@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            <a href="https://wa.me/593988125641" target="_blank">+593 098 812 5641</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Ubicación</strong><br>
+                            Quito, Ecuador
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <strong>LinkedIn</strong><br>
+                            <a href="#" target="_blank">Síguenos en LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="response-time">
+                        <strong>⏰ Tiempo de Respuesta Garantizado:</strong><br>
+                        Respuesta inicial en menos de 24 horas
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form style="background: var(--white); padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1); border: 1px solid var(--gray-200);">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 2rem; font-size: 1.5rem;">Solicitar Evaluación Inicial</h3>
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa">Empresa / Organización *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servicio">Servicio de interés</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">Seleccione un servicio</option>
+                                <option value="regularizacion">Regularización y Cumplimiento Ambiental</option>
+                                <option value="residuos">Gestión de Residuos Peligrosos</option>
+                                <option value="patrimonio">Patrimonio Natural y Biodiversidad</option>
+                                <option value="certificaciones">Certificaciones y Reconocimientos</option>
+                                <option value="monitoreos">Monitoreos Ambientales</option>
+                                <option value="sig">Sistemas de Información Geográfica</option>
+                                <option value="capacitaciones">Capacitaciones Especializadas</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje breve</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu proyecto o necesidad..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary" style="width: 100%;">
+                            📤 Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>C&A - Clavijo y Asociados</h4>
+                    <p style="color: var(--gray-300); line-height: 1.6;">
+                        Soluciones ambientales integrales con enfoque técnico y estratégico. 
+                        Transformamos la gestión ambiental en ventaja competitiva.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <strong style="color: var(--primary-green);">"Cumplir, proteger y prosperar juntos"</strong>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Regularización Ambiental</a></li>
+                        <li><a href="#servicios">Gestión de Residuos</a></li>
+                        <li><a href="#servicios">Patrimonio Natural</a></li>
+                        <li><a href="#servicios">Certificaciones</a></li>
+                        <li><a href="#servicios">Monitoreos</a></li>
+                        <li><a href="#servicios">SIG y Capacitaciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#equipo">Nuestro Equipo</a></li>
+                        <li><a href="#testimonios">Casos de Éxito</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="https://wa.me/593988125641" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto Directo</h4>
+                    <ul>
+                        <li>📧 <a href="mailto:ambiental.cya@gmail.com">ambiental.cya@gmail.com</a></li>
+                        <li>📱 <a href="https://wa.me/593988125641">+593 098 812 5641</a></li>
+                        <li>📍 Quito, Ecuador</li>
+                        <li>⏰ Respuesta en menos de 24h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 C&A - Clavijo y Asociados. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with loading class
+        document.querySelectorAll('.loading').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            const message = `
+Solicitud de Evaluación Inicial - C&A
+
+👤 *Nombre:* ${data.nombre}
+🏢 *Empresa:* ${data.empresa}
+📧 *Email:* ${data.email}
+📱 *Teléfono:* ${data.telefono || 'No proporcionado'}
+🎯 *Servicio:* ${data.servicio || 'No especificado'}
+
+💬 *Mensaje:*
+${data.mensaje || 'Sin mensaje adicional'}
+
+---
+Enviado desde clavijoambiental.ec
+            `.trim();
+            
+            // Open WhatsApp with pre-filled message
+            const whatsappUrl = `https://wa.me/593988125641?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show confirmation
+            alert('¡Gracias! Te redirigimos a WhatsApp para completar tu solicitud. Responderemos en menos de 24 horas.');
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
